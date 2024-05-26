@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+	<title>Пропуск на сайт за віком</title>
+	<style type="text/css">
+        body{
+            background-color: yellowgreen;
+        }
+		div{
+			font-size: 50px; 
+			color: red;
+			text-align: center;
+		}
+		.cqe{
+			width: 100px;
+			height: 50px;
+			font-size: 36px;
+			text-align: center;
+		}
+/* CSS */
+.button-52 {
+  font-size: 16px;
+  font-weight: 200;
+  letter-spacing: 1px;
+  padding: 13px 20px 13px;
+  outline: 0;
+  border: 1px solid rgb(101, 22, 186);
+  cursor: pointer;
+  position: relative;
+  background-color: rgba(15, 196, 60, 0);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 150px;
+  height: 50px;
+}
+
+.button-52:after {
+  content: "";
+  background-color: #d54000;
+  width: 150px;
+  z-index: -1;
+  position: absolute;
+  height: 50px;
+  top: 7px;
+  left: 7px;
+  transition: 0.2s;
+}
+
+.button-52:hover:after {
+  top: 0px;
+  left: 0px;
+}
+
+	</style>
+</head>
+<body>   
+	<script>
+function AgeAcept() {
+  let age  = + document.age.acept.value; 
+  if (age >= 21 && age <= 100){
+    document.getElementById('result').innerHTML ="Ласкаво просимо";
+    }
+    else {
+        document.getElementById('result').innerHTML ='Вхід заборонено'
+    }
+        }    
+	</script>
+	<div>
+<p>Введіть свій вік</p>
+<form name="age" action="javascript:AgeAcept()">
+age <input class="cqe" name="acept" type="text" value="" size="10">
+<button class="button-52" type="submit" name="submit" value="">Підтвердити</button>
+<button class="button-52" type="reset" name="reset" value="">Очистити</button>
+</form>
+<p><span id="result"></span></p>
+</div>
+
+</body></html>

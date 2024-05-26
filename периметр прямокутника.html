@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+	<title>Периметр прямокутника</title>
+	<style type="text/css">
+        body{
+            background-color: white;
+        }
+		div{
+			font-size: 50px; 
+			color: peru;
+			text-align: center;
+		}
+		.cqe{
+			width: 50px;
+			height: 50px;
+			font-size: 36px;
+			text-align: center;
+		}
+/* CSS */
+.button-52 {
+  font-size: 16px;
+  font-weight: 200;
+  letter-spacing: 1px;
+  padding: 13px 20px 13px;
+  outline: 0;
+  border: 1px solid green;
+  cursor: pointer;
+  position: relative;
+  background-color: rgba(28, 147, 171, 0);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 150px;
+  height: 50px;
+}
+
+.button-52:after {
+  content: "";
+  background-color: #07e956;
+  width: 150px;
+  z-index: -1;
+  position: absolute;
+  height: 50px;
+  top: 7px;
+  left: 7px;
+  transition: 0.2s;
+}
+
+.button-52:hover:after {
+  top: 0px;
+  left: 0px;
+}
+
+	</style>
+</head>
+<body>
+	<script>
+function square(){
+            let a=+document.square_m.a.value;
+            let b=+document.square_m.b.value;
+            let P =(a+b)*2;
+            let S=a*b;
+                    
+            let area=document.getElementById("area");
+            let perimeter=document.getElementById("perimeter");
+
+           
+              string=S;
+              string1=P;
+        area.innerHTML = string;
+        perimeter.innerHTML = string1;
+    }
+	</script>
+	<div>
+<p>Розрахунок площі та периметра прямокутника</p>
+<form name="square_m" action="javascript:square()">
+a <input class="cqe" name="a" type="text" value="" size="4">
+b <input class="cqe" name="b" type="text" value="" size="4">
+<button class="button-52" type="submit" value="">Розрахувати</button>
+<button class="button-52" type="reset" name="reset" value="">Скинути</button>
+</form>
+<p>Площа прямокутника = <span id="area">см квадратних</span></p>
+<p>Периметр прямокутника = <span id="perimeter">см</span></p>
+</div>
+
+</body></html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+	<title>Периметр трикутника</title>
+	<style type="text/css">
+        body{
+            background-color: white;
+        }
+		div{
+			font-size: 50px; 
+			color: red;
+			text-align: center;
+		}
+		.cqe{
+			width: 50px;
+			height: 50px;
+			font-size: 36px;
+			text-align: center;
+		}
+/* CSS */
+.button-52 {
+  font-size: 16px;
+  font-weight: 200;
+  letter-spacing: 1px;
+  padding: 13px 20px 13px;
+  outline: 0;
+  border: 1px solid yellowgreen;
+  cursor: pointer;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 150px;
+  height: 50px;
+}
+
+.button-52:after {
+  content: "";
+  background-color: #46b0b8;
+  width: 150px;
+  z-index: -1;
+  position: absolute;
+  height: 50px;
+  top: 7px;
+  left: 7px;
+  transition: 0.2s;
+}
+
+.button-52:hover:after {
+  top: 0px;
+  left: 0px;
+}
+
+	</style>
+</head>
+<body>
+	<script>
+function triangle(){
+            let a=+document.triangle_f.a.value;
+            let b=+document.triangle_f.b.value;
+            let c=+document.triangle_f.c.value;
+           
+            let area=document.getElementById("area");
+            let perimeter=document.getElementById("perimeter");
+            if((a+b)>c && (b+c)>a && (a+c)>b && a>0 &&b>0 &&c>0 ){
+				 let p=(a+b+c)/2;
+            let P=a+b+c;
+            let S=Math.sqrt(p*(p-a)*(p-b)*(p-c));
+              string=S;
+              string1=P;
+            }else{
+                string=string1="Такого трикутника не існує"
+        }
+        area.innerHTML = string;
+        perimeter.innerHTML = string1;
+    }
+	</script>
+	<div>
+<p>Розрахунок площі та периметра трикутника</p>
+<form name="triangle_f" action="javascript:triangle()">
+a <input class="cqe" name="a" type="text" value="" size="4">
+b <input class="cqe" name="b" type="text" value="" size="4">
+c <input class="cqe" name="c" type="text" value="" size="4">
+<button class="button-52" type="submit" value="">Розрахувати</button>
+<button class="button-52" type="reset" name="reset" value="">Скинути</button>
+</form>
+<p>Площа трикутника = <span id="area">см квадратних</span></p>
+<p>Периметр трикутника = <span id="perimeter">см</span></p>
+</div>
+
+</body></html>

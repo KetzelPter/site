@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+	<title>Пори року</title>
+	<style type="text/css">
+        body{
+            background-color: rgb(235, 33, 33);
+        }
+		div{
+			font-size: 50px; 
+			color: greenyellow;
+			text-align: center;
+		}
+		.cqe{
+			width: 100px;
+			height: 50px;
+			font-size: 36px;
+			text-align: center;
+		}
+/* CSS */
+.button-52 {
+  font-size: 16px;
+  font-weight: 200;
+  letter-spacing: 1px;
+  padding: 13px 20px 13px;
+  outline: 0;
+  border: 1px solid blueviolet;
+  cursor: pointer;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 150px;
+  height: 50px;
+}
+
+.button-52:after {
+  content: "";
+  background-color: #0fbc4c;
+  width: 150px;
+  z-index: -1;
+  position: absolute;
+  height: 50px;
+  top: 7px;
+  left: 7px;
+  transition: 0.2s;
+}
+
+.button-52:hover:after {
+  top: 0px;
+  left: 0px;
+}
+
+	</style>
+</head>
+<body>   
+	<script>
+function Month() {
+    let month = + document.mon.th.value;
+    switch(month){
+        case 12:
+        case 1:
+        case 2:
+        
+        document.getElementById('result').innerHTML ="це зима";
+        break;
+        case 3:
+        case 4:
+        case 5:
+        
+        document.getElementById('result').innerHTML ="це весна";
+        break;
+        case 6:
+        case 7:
+        case 8:
+        
+        document.getElementById('result').innerHTML ="це літо";
+        break;
+        case 9:
+        case 10:
+        case 11:
+        
+        document.getElementById('result').innerHTML ="це осінь";
+        break;
+        default:
+        document.getElementById('result').innerHTML ="це не місяць";
+    }}
+	</script>
+	<div>
+<p>Введіть порядковий номер місяця</p>
+<form name="mon" action="javascript:Month()">
+num <input class="cqe" name="th" type="text" value="" size="10">
+<button class="button-52" type="submit" name="submit" value="">Підтвердити</button>
+<button class="button-52" type="reset" name="reset" value="">Очистити</button>
+</form>
+<p><span id="result"></span></p>
+</div>
+
+</body></html>

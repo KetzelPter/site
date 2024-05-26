@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+	<title>Пропуск на сайт за віком</title>
+	<style type="text/css">
+        body{
+            background-color: white;
+        }
+		div{
+			font-size: 50px; 
+			color: black;
+			text-align: center;
+		}
+		.cqe{
+			width: 100px;
+			height: 50px;
+			font-size: 36px;
+			text-align: center;
+		}
+/* CSS */
+.button-52 {
+  font-size: 16px;
+  font-weight: 200;
+  letter-spacing: 1px;
+  padding: 13px 20px 13px;
+  outline: 0;
+  border: 1px solid black;
+  cursor: pointer;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 150px;
+  height: 50px;
+}
+
+.button-52:after {
+  content: "";
+  background-color: #ffe54c;
+  width: 150px;
+  z-index: -1;
+  position: absolute;
+  height: 50px;
+  top: 7px;
+  left: 7px;
+  transition: 0.2s;
+}
+
+.button-52:hover:after {
+  top: 0px;
+  left: 0px;
+}
+
+	</style>
+</head>
+<body>   
+	<script>
+function YourMarkToday() {
+  let mark = + document.mark.today.value; 
+    switch(mark){
+        
+        case 1:
+        case 2:
+        case 3:
+        document.getElementById('result').innerHTML ="низький рівень";
+        break;
+        
+        case 4:
+        case 5:
+        case 6:
+        document.getElementById('result').innerHTML ="середній рівень";
+        break;
+      
+        case 7:
+        case 8:
+        case 9:
+        document.getElementById('result').innerHTML ="достатній рівень";
+        break;
+        case 10:
+        case 11:
+        case 12:
+        document.getElementById('result').innerHTML ="високий рівень";
+        break;
+        default:
+        document.getElementById('result').innerHTML ="це не оцінка";
+    }} 
+	</script>
+	<div>
+<p>Яка в тебе сьогодні оцінка?</p>
+<form name="mark" action="javascript:YourMarkToday()">
+mark <input class="cqe" name="today" type="text" value="" size="10">
+<button class="button-52" type="submit" name="submit" value="">Підтвердити</button>
+<button class="button-52" type="reset" name="reset" value="">Змінити</button>
+</form>
+<p><span id="result"></span></p>
+</div>
+
+</body></html>
